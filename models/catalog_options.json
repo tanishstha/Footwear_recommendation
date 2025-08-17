@@ -1,0 +1,36 @@
+{
+  "genders": [
+    "Kids",
+    "Men",
+    "Women"
+  ],
+  "product_lines": [
+    "Basketball",
+    "Lifestyle",
+    "Running",
+    "Soccer",
+    "Training"
+  ],
+  "product_names": [
+    "Air Force 1",
+    "Air Jordan",
+    "Air Zoom",
+    "Blazer Mid",
+    "Dunk Low",
+    "Flex Trainer",
+    "Free RN",
+    "Kyrie Flytrap",
+    "LeBron 20",
+    "Mercurial Superfly",
+    "Metcon 7",
+    "Pegasus Turbo",
+    "Phantom GT",
+    "Premier III",
+    "React Infinity",
+    "SuperRep Go",
+    "Tiempo Legend",
+    "Waffle One",
+    "Zoom Freak",
+    "ZoomX Invincible"
+  ]
+}

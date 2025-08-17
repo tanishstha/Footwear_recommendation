@@ -1,0 +1,1252 @@
+{
+  "metcon 7": [
+    {
+      "product_name": "Tiempo Legend",
+      "score": 0.000231000231000231,
+      "co_count": 3
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.000128526444315918,
+      "co_count": 2
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 7.368110816386678e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Premier III",
+      "score": 7.06364342727979e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 6.892748828232699e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 6.78334011667345e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.625588020936858e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 6.524434005350036e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 6.105006105006105e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 5.775005775005775e-05,
+      "co_count": 1
+    }
+  ],
+  "react infinity": [
+    {
+      "product_name": "Dunk Low",
+      "score": 0.0001944516463572725,
+      "co_count": 3
+    },
+    {
+      "product_name": "Free RN",
+      "score": 0.0001819063788503517,
+      "co_count": 3
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.0001670843776106934,
+      "co_count": 3
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 0.000128526444315918,
+      "co_count": 2
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.00012427763623935873,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00010741138560687433,
+      "co_count": 2
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00010442773600668337,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 7.093204709887927e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 7.026913077085236e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 6.897978892184589e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 6.7736909842173e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 5.967299200381907e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 5.739539688916949e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 5.332480136511492e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 5.080268238162975e-05,
+      "co_count": 1
+    }
+  ],
+  "superrep go": [
+    {
+      "product_name": "Zoom Freak",
+      "score": 0.00011958861516383641,
+      "co_count": 2
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.00011168192986374804,
+      "co_count": 2
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00010725010725010725,
+      "co_count": 2
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 0.00010475591870940707,
+      "co_count": 2
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 9.584052137243626e-05,
+      "co_count": 2
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 5.775005775005775e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 5.080268238162975e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 5.005005005005005e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 4.692192192192192e-05,
+      "co_count": 1
+    }
+  ],
+  "dunk low": [
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 0.00031635558367605187,
+      "co_count": 4
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.0001944516463572725,
+      "co_count": 3
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 0.00015257857796765334,
+      "co_count": 2
+    },
+    {
+      "product_name": "Free RN",
+      "score": 0.00013904338153503893,
+      "co_count": 2
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 0.00013365410318096765,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.0001231527093596059,
+      "co_count": 2
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 8.056719303899453e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 7.368110816386678e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Premier III",
+      "score": 7.124536905101169e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 6.580679126085812e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 5.986590038314176e-05,
+      "co_count": 1
+    }
+  ],
+  "phantom gt": [
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 0.0002133560913164071,
+      "co_count": 3
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.00019219680953296174,
+      "co_count": 3
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 0.00013365410318096765,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 0.00011835019823658205,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00011074197120708749,
+      "co_count": 2
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 0.00010475591870940707,
+      "co_count": 2
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 7.244801854669275e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 6.983727913960472e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 6.860122110173561e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 6.740815638692282e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 6.625588020936858e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 6.251562890722681e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 6.152331733727083e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 5.7421762848119435e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 5.4978283577986696e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 5.383290267011197e-05,
+      "co_count": 1
+    }
+  ],
+  "premier iii": [
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.0002361275088547816,
+      "co_count": 4
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.0001967729240456513,
+      "co_count": 3
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 0.00019219680953296174,
+      "co_count": 3
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.00018365472910927456,
+      "co_count": 3
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 0.00017583963425356076,
+      "co_count": 3
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 0.0001559332605644784,
+      "co_count": 2
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 0.000154475940372287,
+      "co_count": 2
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 0.0001462736780516346,
+      "co_count": 2
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.00012427763623935873,
+      "co_count": 2
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 0.00011168192986374804,
+      "co_count": 2
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 7.582075972401244e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 7.124536905101169e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 7.06364342727979e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Force 1",
+      "score": 6.830134553650706e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 6.308750236578134e-05,
+      "co_count": 1
+    }
+  ],
+  "zoom freak": [
+    {
+      "product_name": "Dunk Low",
+      "score": 0.00015257857796765334,
+      "co_count": 2
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.0001462736780516346,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00012642225031605562,
+      "co_count": 2
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 0.00011958861516383641,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 8.348639171814995e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 7.97257434425576e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 7.023458350891979e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.860122110173561e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 6.555227794165847e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 6.276281930584321e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 6.145526057030482e-05,
+      "co_count": 1
+    }
+  ],
+  "zoomx invincible": [
+    {
+      "product_name": "Premier III",
+      "score": 0.0002361275088547816,
+      "co_count": 4
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00022675736961451248,
+      "co_count": 4
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 0.00020215633423180594,
+      "co_count": 3
+    },
+    {
+      "product_name": "Free RN",
+      "score": 0.0001728110599078341,
+      "co_count": 3
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.00015873015873015873,
+      "co_count": 3
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 0.00015197568389057752,
+      "co_count": 3
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 0.0001287001287001287,
+      "co_count": 2
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 0.00012642225031605562,
+      "co_count": 2
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 0.00012422360248447205,
+      "co_count": 2
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 0.0001231527093596059,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Force 1",
+      "score": 0.0001180637544273908,
+      "co_count": 2
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 0.00011074197120708749,
+      "co_count": 2
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.00010741138560687433,
+      "co_count": 2
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 9.92063492063492e-05,
+      "co_count": 2
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 6.55307994757536e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 6.105006105006105e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 5.452562704471101e-05,
+      "co_count": 1
+    }
+  ],
+  "blazer mid": [
+    {
+      "product_name": "Waffle One",
+      "score": 0.00029394473838918284,
+      "co_count": 5
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00022675736961451248,
+      "co_count": 4
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 0.00022461814914645105,
+      "co_count": 3
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 0.0002145002145002145,
+      "co_count": 3
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.0001967729240456513,
+      "co_count": 3
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 0.00016886187098953058,
+      "co_count": 3
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00011022927689594356,
+      "co_count": 2
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 0.00010725010725010725,
+      "co_count": 2
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 7.417297136923305e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 7.023458350891979e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 6.901311249137337e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 6.78334011667345e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 6.400409626216078e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.152331733727083e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 6.0584030049678906e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 5.967299200381907e-05,
+      "co_count": 1
+    }
+  ],
+  "waffle one": [
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00029394473838918284,
+      "co_count": 5
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 0.0002101392172314158,
+      "co_count": 4
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.00018365472910927456,
+      "co_count": 3
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.0001670843776106934,
+      "co_count": 3
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00015873015873015873,
+      "co_count": 3
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 0.00013845621322256836,
+      "co_count": 2
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 0.0001288244766505636,
+      "co_count": 2
+    },
+    {
+      "product_name": "Free RN",
+      "score": 0.00011947431302270011,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 0.00011309018942606728,
+      "co_count": 2
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 6.795786612300373e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 6.555227794165847e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 5.7421762848119435e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 5.1440329218106995e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 5.005005005005005e-05,
+      "co_count": 1
+    }
+  ],
+  "free rn": [
+    {
+      "product_name": "React Infinity",
+      "score": 0.0001819063788503517,
+      "co_count": 3
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.0001728110599078341,
+      "co_count": 3
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 0.00013904338153503893,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Force 1",
+      "score": 0.00013329778725673153,
+      "co_count": 2
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.00011947431302270011,
+      "co_count": 2
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00011200716845878136,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 7.608034083992696e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 7.39863865048831e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 7.012622720897616e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 6.892748828232699e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 6.400409626216078e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.251562890722681e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 5.719514985129261e-05,
+      "co_count": 1
+    }
+  ],
+  "lebron 20": [
+    {
+      "product_name": "Air Zoom",
+      "score": 0.00019654088050314466,
+      "co_count": 3
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 0.00012512512512512512,
+      "co_count": 2
+    },
+    {
+      "product_name": "Free RN",
+      "score": 0.00011200716845878136,
+      "co_count": 2
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00011022927689594356,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 0.00010602205258693808,
+      "co_count": 2
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 0.00010442773600668337,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 9.92063492063492e-05,
+      "co_count": 2
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 6.145526057030482e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 5.986590038314176e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Force 1",
+      "score": 5.73921028466483e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 5.383290267011197e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 5.1440329218106995e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 4.692192192192192e-05,
+      "co_count": 1
+    }
+  ],
+  "flex trainer": [
+    {
+      "product_name": "Waffle One",
+      "score": 0.0002101392172314158,
+      "co_count": 4
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.00017583963425356076,
+      "co_count": 3
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00016886187098953058,
+      "co_count": 3
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00015197568389057752,
+      "co_count": 3
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 0.00012334258402713538,
+      "co_count": 2
+    },
+    {
+      "product_name": "SuperRep Go",
+      "score": 9.584052137243626e-05,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 6.690753378830456e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 6.628222973420826e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 6.506604203266315e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 6.276281930584321e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 5.719514985129261e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 5.4978283577986696e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 5.332480136511492e-05,
+      "co_count": 1
+    }
+  ],
+  "mercurial superfly": [
+    {
+      "product_name": "Premier III",
+      "score": 0.000154475940372287,
+      "co_count": 2
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.00013845621322256836,
+      "co_count": 2
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 8.574123295892996e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 8.056719303899453e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 7.417297136923305e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 7.244801854669275e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 7.134194192765928e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 7.026913077085236e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 6.628222973420826e-05,
+      "co_count": 1
+    }
+  ],
+  "air zoom": [
+    {
+      "product_name": "Tiempo Legend",
+      "score": 0.0003399626041135475,
+      "co_count": 4
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.00022461814914645105,
+      "co_count": 3
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00020215633423180594,
+      "co_count": 3
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00019654088050314466,
+      "co_count": 3
+    },
+    {
+      "product_name": "Premier III",
+      "score": 0.0001559332605644784,
+      "co_count": 2
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 8.348639171814995e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 8.203445447087777e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Force 1",
+      "score": 7.79666302822392e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 7.608034083992696e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 7.201497911565606e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 7.093204709887927e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 6.690753378830456e-05,
+      "co_count": 1
+    }
+  ],
+  "pegasus turbo": [
+    {
+      "product_name": "Dunk Low",
+      "score": 0.00031635558367605187,
+      "co_count": 4
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 0.0002133560913164071,
+      "co_count": 3
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 8.574123295892996e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 7.977662544874351e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Premier III",
+      "score": 7.582075972401244e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 7.39863865048831e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 7.003291547027102e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 6.897978892184589e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 6.795786612300373e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 6.55307994757536e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 6.506604203266315e-05,
+      "co_count": 1
+    }
+  ],
+  "air jordan": [
+    {
+      "product_name": "Phantom GT",
+      "score": 0.00011835019823658205,
+      "co_count": 2
+    },
+    {
+      "product_name": "Waffle One",
+      "score": 0.00011309018942606728,
+      "co_count": 2
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00010602205258693808,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 7.201497911565606e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Mercurial Superfly",
+      "score": 7.134194192765928e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 7.003291547027102e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 6.877106113747335e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Dunk Low",
+      "score": 6.580679126085812e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 6.524434005350036e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Premier III",
+      "score": 6.308750236578134e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 6.0584030049678906e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 5.739539688916949e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 5.452562704471101e-05,
+      "co_count": 1
+    }
+  ],
+  "tiempo legend": [
+    {
+      "product_name": "Air Zoom",
+      "score": 0.0003399626041135475,
+      "co_count": 4
+    },
+    {
+      "product_name": "Metcon 7",
+      "score": 0.000231000231000231,
+      "co_count": 3
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 0.0002145002145002145,
+      "co_count": 3
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.0001287001287001287,
+      "co_count": 2
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 0.00012512512512512512,
+      "co_count": 2
+    },
+    {
+      "product_name": "Zoom Freak",
+      "score": 7.97257434425576e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Kyrie Flytrap",
+      "score": 7.833920877399138e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.983727913960472e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Air Jordan",
+      "score": 6.877106113747335e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "React Infinity",
+      "score": 6.7736909842173e-05,
+      "co_count": 1
+    }
+  ],
+  "air force 1": [
+    {
+      "product_name": "Free RN",
+      "score": 0.00013329778725673153,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.0001180637544273908,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 7.79666302822392e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Premier III",
+      "score": 6.830134553650706e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "LeBron 20",
+      "score": 5.73921028466483e-05,
+      "co_count": 1
+    }
+  ],
+  "kyrie flytrap": [
+    {
+      "product_name": "Waffle One",
+      "score": 0.0001288244766505636,
+      "co_count": 2
+    },
+    {
+      "product_name": "ZoomX Invincible",
+      "score": 0.00012422360248447205,
+      "co_count": 2
+    },
+    {
+      "product_name": "Flex Trainer",
+      "score": 0.00012334258402713538,
+      "co_count": 2
+    },
+    {
+      "product_name": "Air Zoom",
+      "score": 8.203445447087777e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Pegasus Turbo",
+      "score": 7.977662544874351e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Tiempo Legend",
+      "score": 7.833920877399138e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Free RN",
+      "score": 7.012622720897616e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Blazer Mid",
+      "score": 6.901311249137337e-05,
+      "co_count": 1
+    },
+    {
+      "product_name": "Phantom GT",
+      "score": 6.740815638692282e-05,
+      "co_count": 1
+    }
+  ]
+}

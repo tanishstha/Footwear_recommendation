@@ -1,0 +1,11 @@
+{
+  "source_csv": "Nike_Sales_Cleaned.csv",
+  "generated_at": "2025-08-17T16:57:51.394976+00:00",
+  "n_rows": 2500,
+  "n_items_catalog": 536,
+  "weights": {
+    "revenue": 0.7,
+    "profit": 0.3
+  },
+  "also_topn": 20
+}

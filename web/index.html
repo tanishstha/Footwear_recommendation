@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Shoes Recommender UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg:#0b1220; --card:#121a2b; --muted:#7e8aa3; --text:#e5ecff; --accent:#5b8cff;
+      --ok:#32d583; --warn:#ffd166; --err:#ef4444; --br:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .wrap{max-width:1200px;margin:40px auto;padding:0 16px}
+    h1{font-size:26px;margin:0 0 18px}
+    h2{font-size:18px;margin:0 0 10px;color:#cdd5ea}
+    .grid{display:grid;gap:16px;grid-template-columns:1fr 1fr 1fr}
+    .card{background:var(--card);border-radius:var(--br);padding:16px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+    label{display:block;margin:8px 0 4px;color:var(--muted)}
+    input,select,button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #223; background:#0e1626;color:var(--text)}
+    button{background:var(--accent);border:none;font-weight:600;cursor:pointer}
+    button[disabled]{opacity:.6;cursor:not-allowed}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{border-bottom:1px solid #223;padding:8px;text-align:left;font-size:13px;vertical-align:top}
+    th.right,td.right{text-align:right}
+    td.neg{color:var(--err)}
+    td.mono{font-variant-numeric:tabular-nums}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#1a2340;color:#cfe;margin-right:6px;margin-top:4px}
+    .muted{color:var(--muted)}
+    .status{margin-bottom:10px}
+    .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .preset{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .preset button{width:auto;padding:8px 10px}
+    .searchline{display:flex;gap:8px;margin-top:8px}
+    .searchline input{flex:1}
+    img.report{width:100%;border-radius:12px;border:1px solid #223;background:#0e1626}
+    @media (max-width: 1100px){ .grid{grid-template-columns:1fr} }
+    .sort{cursor:pointer}
+    .sort::after{content:" ⬍"; opacity:.45}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Shoes Recommender</h1>
+    <div class="status muted" id="status">Loading catalog…</div>
+
+    <div class="grid">
+      <!-- Trending -->
+      <div class="card">
+        <h2>🔥 Trending by Segment</h2>
+        <div class="row">
+          <div>
+            <label>Gender</label>
+            <select id="trendGender"></select>
+          </div>
+          <div>
+            <label>Product Line</label>
+            <select id="trendLine"><option value="">(All)</option></select>
+          </div>
+          <div>
+            <label>Top K</label>
+            <input id="trendK" type="number" min="1" max="100" value="10" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label>Diversify by product line</label>
+            <select id="trendDiversify"><option value="true">Yes</option><option value="false">No</option></select>
+          </div>
+          <div>
+            <label>Weight: Revenue</label>
+            <input id="wRev" type="number" min="0" max="1" step="0.1" value="0.7" />
+          </div>
+          <div>
+            <label>Weight: Profit</label>
+            <input id="wProf" type="number" min="0" max="1" step="0.1" value="0.3" />
+          </div>
+        </div>
+
+        <!-- weight presets + search -->
+        <div class="preset">
+          <button id="presGMV"  title="Favor sales volume/revenue">Preset: GMV</button>
+          <button id="presBal"  title="Balanced">Preset: Balanced</button>
+          <button id="presMargin" title="Favor profitability">Preset: Margin</button>
+        </div>
+        <div class="searchline">
+          <input id="trendSearch" placeholder="Filter results by product name…">
+          <button id="btnTrending">Get Trending</button>
+          <button id="btnTrendingCSV" disabled>Export CSV</button>
+        </div>
+
+        <div id="trendResult"></div>
+      </div>
+
+      <!-- Similar -->
+      <div class="card">
+        <h2>🟣 More Like This</h2>
+        <div class="row">
+          <div>
+            <label>Seed Product</label>
+            <input list="productList" id="seedName" placeholder="Start typing…" />
+            <datalist id="productList"></datalist>
+          </div>
+          <div>
+            <label>Gender Filter</label>
+            <select id="simGender"><option value="">(no filter)</option></select>
+          </div>
+          <div>
+            <label>Top K</label>
+            <input id="simK" type="number" min="1" max="100" value="10" />
+          </div>
+        </div>
+        <div class="toolbar">
+          <button id="btnSimilar">Find Similar</button>
+          <button id="btnSimilarCSV" disabled>Export CSV</button>
+        </div>
+        <div id="simResult"></div>
+      </div>
+
+      <!-- Also Bought -->
+      <div class="card">
+        <h2>🛒 Frequently Bought Together</h2>
+        <div class="row">
+          <div>
+            <label>Seed Product</label>
+            <input list="productList" id="alsoSeed" placeholder="Start typing…" />
+          </div>
+          <div>
+            <label>Top K</label>
+            <input id="alsoK" type="number" min="1" max="50" value="10" />
+          </div>
+          <div class="toolbar">
+            <button id="btnAlso">Get Also-Bought</button>
+            <button id="btnAlsoCSV" disabled>Export CSV</button>
+          </div>
+        </div>
+        <div id="alsoResult"></div>
+      </div>
+    </div>
+
+    <!-- Reports Viewer -->
+    <div class="card" style="margin-top:16px">
+      <h2>📊 Reports (from training)</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr">
+        <div>
+          <label>Revenue by Gender</label>
+          <img class="report" src="/reports/rev_by_gender.png" alt="rev_by_gender.png">
+        </div>
+        <div>
+          <label>Revenue by Product Line</label>
+          <img class="report" src="/reports/rev_by_product_line.png" alt="rev_by_product_line.png">
+        </div>
+        <div>
+          <label>Top 10 Products by Revenue</label>
+          <img class="report" src="/reports/top10_products_revenue.png" alt="top10_products_revenue.png">
+        </div>
+        <div>
+          <label>Monthly Revenue Trend</label>
+          <img class="report" src="/reports/monthly_revenue_trend.png" alt="monthly_revenue_trend.png">
+        </div>
+      </div>
+      <div class="muted" style="margin-top:8px">If images 404, run <code>train_pipeline.py</code> and restart the API.</div>
+    </div>
+  </div>
+
+  <script>
+    // ====== CONFIG ======
+    const API_KEY = "";               // set if you enabled auth in app.py
+    const API_BASE = "";              // same-origin; set "http://127.0.0.1:8000" if serving elsewhere
+    const api = (path) => `${API_BASE}${path}`;
+    const HEADERS = API_KEY ? {"X-API-Key": API_KEY} : {};
+
+    // ====== STATE ======
+    let lastTrending = [];
+    let lastSimilar = [];
+    let lastAlso = [];
+
+    // ====== ELEMENTS ======
+    const statusEl = document.getElementById('status');
+    const trendGender = document.getElementById('trendGender');
+    const trendLine = document.getElementById('trendLine');
+    const trendK = document.getElementById('trendK');
+    const trendDiversify = document.getElementById('trendDiversify');
+    const wRev = document.getElementById('wRev');
+    const wProf = document.getElementById('wProf');
+    const btnTrending = document.getElementById('btnTrending');
+    const btnTrendingCSV = document.getElementById('btnTrendingCSV');
+    const trendResult = document.getElementById('trendResult');
+    const trendSearch = document.getElementById('trendSearch');
+
+    const presGMV = document.getElementById('presGMV');
+    const presBal = document.getElementById('presBal');
+    const presMargin = document.getElementById('presMargin');
+
+    const seedName = document.getElementById('seedName');
+    const simGender = document.getElementById('simGender');
+    const simK = document.getElementById('simK');
+    const btnSimilar = document.getElementById('btnSimilar');
+    const btnSimilarCSV = document.getElementById('btnSimilarCSV');
+    const simResult = document.getElementById('simResult');
+    const productList = document.getElementById('productList');
+
+    const alsoSeed = document.getElementById('alsoSeed');
+    const alsoK = document.getElementById('alsoK');
+    const btnAlso = document.getElementById('btnAlso');
+    const btnAlsoCSV = document.getElementById('btnAlsoCSV');
+    const alsoResult = document.getElementById('alsoResult');
+
+    // ====== FORMAT HELPERS ======
+    function fmtNum(n, digits=0){ if(n==null||n==='')return ''; const v=Number(n); return v.toLocaleString(undefined,{minimumFractionDigits:digits,maximumFractionDigits:digits}); }
+    function fmtMoney(n){ if(n==null||n==='')return ''; const v=Number(n); const sign=v<0?'-':''; return sign+'$'+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
+    function fmtPct(n, digits=1){ if(n==null||n==='')return ''; return (Number(n)*100).toFixed(digits)+'%'; }
+    function reasonsPills(reasons){ if(!reasons||!reasons.length) return ''; return `<div>${reasons.map(r=>`<span class="pill">${r}</span>`).join('')}</div>`; }
+
+    // sorting & filtering helpers
+    function sortBy(arr,key,asc=true){
+      const a2=[...arr];
+      a2.sort((a,b)=>{
+        const va=a[key], vb=b[key];
+        const na=Number(va), nb=Number(vb);
+        const bothNum=!Number.isNaN(na)&&!Number.isNaN(nb);
+        if(bothNum) return asc?na-nb:nb-na;
+        const sa=String(va??''), sb=String(vb??'');
+        return asc?sa.localeCompare(sb):sb.localeCompare(sa);
+      });
+      return a2;
+    }
+    function filterByName(rows, needle){
+      if(!needle) return rows;
+      const q=needle.toLowerCase();
+      return rows.filter(r=>String(r.product_name).toLowerCase().includes(q));
+    }
+
+    // ====== RENDERERS ======
+    function renderTrending(rows){
+      if(!rows||rows.length===0) return '<div class="muted">No results.</div>';
+
+      const cols = [
+        {key:'rank',            label:'#',        fmt:v=>fmtNum(v),     cls:'right mono'},
+        {key:'gender_category', label:'gender',   fmt:v=>v,             cls:''},
+        {key:'product_line',    label:'line',     fmt:v=>v,             cls:''},
+        {key:'product_name',    label:'product',  fmt:v=>v,             cls:''},
+        {key:'total_units',     label:'units',    fmt:v=>fmtNum(v),     cls:'right mono'},
+        {key:'total_revenue',   label:'revenue',  fmt:v=>fmtMoney(v),   cls:'right mono'},
+        {key:'total_profit',    label:'profit',   fmt:v=>fmtMoney(v),   cls:'right mono'},
+        {key:'avg_discount',    label:'discount', fmt:v=>fmtPct(v,1),   cls:'right mono'},
+        {key:'score',           label:'score',    fmt:v=>fmtPct(v,1),   cls:'right mono'},
+      ];
+
+      const thead = '<tr>' + cols
+        .map((c,i)=>`<th class="${c.cls.includes('right')?'right':''} sort" data-idx="${i}" title="Sort by ${c.label}">${c.label}</th>`).join('') +
+        '</tr>';
+
+      const body = rows.map(r=>{
+        const tds = cols.map(c=>{
+          const raw=r[c.key];
+          const txt=c.fmt(raw);
+          const cls=(c.key==='total_profit' && Number(raw)<0)?`${c.cls} neg`:c.cls;
+          return `<td class="${cls}">${txt}</td>`;
+        }).join('');
+        return `<tr>${tds}</tr>
+                <tr><td colspan="${cols.length}">${reasonsPills(r.reasons)}</td></tr>`;
+      }).join('');
+
+      const table = `<table id="trendTable"><thead>${thead}</thead><tbody>${body}</tbody></table>`;
+
+      // attach sorting listeners
+      setTimeout(()=>{
+        const el=document.getElementById('trendTable'); if(!el) return;
+        let asc=false; // start with desc feel on first click
+        el.querySelectorAll('th.sort').forEach(th=>{
+          th.addEventListener('click',()=>{
+            const idx=Number(th.getAttribute('data-idx')); const key=cols[idx].key;
+            asc=!asc;
+            lastTrending = sortBy(lastTrending, key, asc);
+            const filtered = filterByName(lastTrending, trendSearch.value.trim());
+            trendResult.innerHTML = renderTrending(filtered);
+          });
+        });
+      },0);
+
+      return table;
+    }
+
+    function renderSimilar(rows){
+      if(!rows||rows.length===0) return '<div class="muted">No results.</div>';
+      const cols = [
+        {key:'product_name',  label:'product',    fmt:v=>v,           cls:''},
+        {key:'product_line',  label:'line',       fmt:v=>v,           cls:''},
+        {key:'gender_category',label:'gender',    fmt:v=>v,           cls:''},
+        {key:'size',          label:'size',       fmt:v=>v,           cls:'right mono'},
+        {key:'similarity',    label:'similarity', fmt:v=>fmtPct(v,1), cls:'right mono'},
+      ];
+      const thead='<tr>'+cols.map(c=>`<th class="${c.cls.includes('right')?'right':''}">${c.label}</th>`).join('')+'</tr>';
+      const body=rows.map(r=>{
+        const tds=cols.map(c=>`<td class="${c.cls}">${c.fmt(r[c.key])}</td>`).join('');
+        return `<tr>${tds}</tr>
+                <tr><td colspan="${cols.length}">${reasonsPills(r.reasons)}</td></tr>`;
+      }).join('');
+      return `<table><thead>${thead}</thead><tbody>${body}</tbody></table>`;
+    }
+
+    function renderAlso(rows){
+      if(!rows||rows.length===0) return '<div class="muted">No results.</div>';
+      const cols = [
+        {key:'product_name', label:'product', fmt:v=>v,           cls:''},
+        {key:'score',        label:'lift',    fmt:v=>fmtNum(v,3), cls:'right mono'},
+        {key:'co_count',     label:'co_cnt',  fmt:v=>fmtNum(v),   cls:'right mono'},
+      ];
+      const thead='<tr>'+cols.map(c=>`<th class="${c.cls.includes('right')?'right':''}">${c.label}</th>`).join('')+'</tr>';
+      const body=rows.map(r=>{
+        const tds=cols.map(c=>`<td class="${c.cls}">${c.fmt(r[c.key])}</td>`).join('');
+        return `<tr>${tds}</tr>
+                <tr><td colspan="${cols.length}">${reasonsPills(r.reasons)}</td></tr>`;
+      }).join('');
+      return `<table><thead>${thead}</thead><tbody>${body}</tbody></table>`;
+    }
+
+    // ====== CATALOG ======
+    async function loadCatalog(){
+      try{
+        const res = await fetch(api('/catalog/options'), { headers: HEADERS });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+
+        trendGender.innerHTML = data.genders.map(g => `<option value="${g}">${g}</option>`).join('');
+        simGender.innerHTML = '<option value="">(no filter)</option>' + data.genders.map(g => `<option value="${g}">${g}</option>`).join('');
+        trendLine.innerHTML = '<option value="">(All)</option>' + data.product_lines.map(l => `<option value="${l}">${l}</option>`).join('');
+        productList.innerHTML = data.product_names.map(p => `<option value="${p}">`).join('');
+
+        statusEl.textContent = 'Ready ✔';
+      }catch(err){
+        statusEl.textContent = 'Failed to load catalog: ' + err.message;
+      }
+    }
+
+    // ====== EVENTS ======
+    // weight presets
+    presGMV.addEventListener('click', ()=>{ wRev.value='0.8'; wProf.value='0.2'; });
+    presBal.addEventListener('click', ()=>{ wRev.value='0.5'; wProf.value='0.5'; });
+    presMargin.addEventListener('click', ()=>{ wRev.value='0.3'; wProf.value='0.7'; });
+
+    // trending
+    btnTrending.addEventListener('click', async () => {
+      btnTrending.disabled = true; trendResult.innerHTML = '<div class="muted">Loading…</div>';
+      try{
+        const gender = trendGender.value;
+        const line = trendLine.value;
+        const k = Math.max(1, Math.min(100, parseInt(trendK.value || '10', 10)));
+        const diversify = trendDiversify.value === 'true';
+        const w_revenue = parseFloat(wRev.value || '0.7');
+        const w_profit  = parseFloat(wProf.value || '0.3');
+        const qs = new URLSearchParams({ gender, top_k: String(k), diversify: String(diversify), w_revenue: String(w_revenue), w_profit: String(w_profit) });
+        if (line) qs.append('product_line', line);
+        const res = await fetch(api('/recommend/trending?' + qs.toString()), { headers: HEADERS });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        lastTrending = data.results || [];
+        const filtered = filterByName(lastTrending, trendSearch.value.trim());
+        trendResult.innerHTML = renderTrending(filtered);
+        btnTrendingCSV.disabled = filtered.length === 0;
+      }catch(err){
+        trendResult.innerHTML = `<div style="color:var(--err)">Error: ${err.message}</div>`;
+        lastTrending = []; btnTrendingCSV.disabled = true;
+      }finally{
+        btnTrending.disabled = false;
+      }
+    });
+
+    // client-side quick filter (no network)
+    trendSearch.addEventListener('input', ()=>{
+      const filtered = filterByName(lastTrending, trendSearch.value.trim());
+      trendResult.innerHTML = renderTrending(filtered);
+      btnTrendingCSV.disabled = filtered.length === 0;
+    });
+
+    // export
+    function toCSV(rows, cols){
+      const escape = v => `"${String(v ?? "").replace(/"/g,'""')}"`;
+      const header = cols.map(escape).join(",");
+      const body = rows.map(r => cols.map(c => escape(r[c])).join(",")).join("\n");
+      return header + "\n" + body;
+    }
+    function downloadCSV(name, csv){
+      const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+    btnTrendingCSV.addEventListener('click', () => {
+      const cols = ['rank','gender_category','product_line','product_name','total_units','total_revenue','total_profit','avg_discount','score'];
+      const filtered = filterByName(lastTrending, trendSearch.value.trim());
+      if (!filtered.length) return;
+      const csv = toCSV(filtered, cols);
+      downloadCSV('trending.csv', csv);
+    });
+
+    // similar
+    btnSimilar.addEventListener('click', async () => {
+      btnSimilar.disabled = true; simResult.innerHTML = '<div class="muted">Loading…</div>';
+      try{
+        const seed = seedName.value.trim();
+        if (!seed) throw new Error('Enter a seed product');
+        const gender = simGender.value;
+        const k = Math.max(1, Math.min(100, parseInt(simK.value || '10', 10)));
+        const qs = new URLSearchParams({ product_name: seed, top_k: String(k) });
+        if (gender) qs.append('gender', gender);
+        const res = await fetch(api('/recommend/similar?' + qs.toString()), { headers: HEADERS });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        lastSimilar = data.results || [];
+        simResult.innerHTML = renderSimilar(lastSimilar);
+        btnSimilarCSV.disabled = lastSimilar.length === 0;
+      }catch(err){
+        simResult.innerHTML = `<div style="color:var(--err)">Error: ${err.message}</div>`;
+        lastSimilar = []; btnSimilarCSV.disabled = true;
+      }finally{
+        btnSimilar.disabled = false;
+      }
+    });
+    btnSimilarCSV.addEventListener('click', () => {
+      if (!lastSimilar.length) return;
+      const cols = ['product_name','product_line','gender_category','size','similarity'];
+      const csv = toCSV(lastSimilar, cols);
+      downloadCSV('similar.csv', csv);
+    });
+
+    // also bought
+    btnAlso.addEventListener('click', async () => {
+      btnAlso.disabled = true; alsoResult.innerHTML = '<div class="muted">Loading…</div>';
+      try{
+        const seed = alsoSeed.value.trim();
+        if (!seed) throw new Error('Enter a seed product');
+        const k = Math.max(1, Math.min(50, parseInt(alsoK.value || '10', 10)));
+        const qs = new URLSearchParams({ product_name: seed, top_k: String(k) });
+        const res = await fetch(api('/recommend/also_bought?' + qs.toString()), { headers: HEADERS });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        lastAlso = data.results || [];
+        alsoResult.innerHTML = renderAlso(lastAlso);
+        btnAlsoCSV.disabled = lastAlso.length === 0;
+      }catch(err){
+        alsoResult.innerHTML = `<div style="color:var(--err)">Error: ${err.message}</div>`;
+        lastAlso = []; btnAlsoCSV.disabled = true;
+      }finally{
+        btnAlso.disabled = false;
+      }
+    });
+    btnAlsoCSV.addEventListener('click', () => {
+      if (!lastAlso.length) return;
+      const cols = ['product_name','score','co_count'];
+      const csv = toCSV(lastAlso, cols);
+      downloadCSV('also_bought.csv', csv);
+    });
+
+    // ====== BOOT ======
+    loadCatalog();
+  </script>
+</body>
+</html>
